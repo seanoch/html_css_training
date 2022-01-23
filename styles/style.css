@@ -72,7 +72,8 @@ body {
 
 .search-term {
     height: 90%;
-    padding: 5px;
+    width: 80%;
+    padding: 10px;
     border: none;
     background: transparent;
     outline: none;
@@ -81,7 +82,7 @@ body {
 #search-icon {
    color: #505050;
    font-size: 24px;
-   width: 10%;
+   width: 20px;
    margin-left: 10px;
  }
 
@@ -108,6 +109,7 @@ body {
     padding: 5px;
     object-fit: cover;
 }
+
 .profile {
     padding: 5px;
     height: 35px;
@@ -116,6 +118,7 @@ body {
     justify-content: left;
     margin-right: 5px;
 }
+
 .profile:hover {
     background: #F2F3F5;
     border-radius: 10px 10px 10px 10px;
@@ -150,7 +153,9 @@ body {
 
 .main {
     display: flex;
-    align-items: center;
+    align-items:stretch;
+    flex-direction: row;
+    justify-content: left;
     padding-top: 60px;
 }
 
@@ -160,7 +165,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: top;
-    align-items: center;
+    align-items: left;
+    position: fixed;
+}
+
+.main-left-space {
+    height: 100%;
+    width: 20%;
 }
 
 .main-center {
@@ -172,14 +183,13 @@ body {
     align-items: center;
 }
 
-.header-right {
+.main-right {
     height: 100%;
     width: 20%;
     display: flex;
-    flex-direction: row;
-    justify-content: right;
+    flex-direction: column;
+    justify-content: top;
     align-items: center;
-    font-size: 14px;
 }
 
 .post {
@@ -275,4 +285,31 @@ hr.separator {
 
 #activity {
     color: rgb(233, 222, 66);
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    width: 80%;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    background: #b9b9b9;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.menu-item-icon {
+    color: #5a8dd8;
+}
+
+#menu-item-profile-pic {
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
 }
