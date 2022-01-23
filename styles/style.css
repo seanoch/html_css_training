@@ -7,11 +7,18 @@ body {
     margin: 0px 0px 0px 0px;
 }
 
+/*================================================================
+|
+|   HEADER
+|
+================================================================*/
+
 .header {
     height: 40px;
     background-color: #ffffff;
     padding: 5px 5px 5px 5px;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     box-shadow: 3px 3px 3px #b3b3b3;;
     display: flex;
     align-items: center;
@@ -20,7 +27,6 @@ body {
 .header-home {
     height: 100%;
     width: 20%;
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -38,12 +44,12 @@ body {
 .header-account {
     height: 100%;
     width: 20%;
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: right;
     align-items: center;
     font-size: 14px;
+    margin-right: 10px;
 }
 
 .material-icons.md-18 { font-size: 18px; }
@@ -51,16 +57,17 @@ body {
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
-.search {
+.input-panel {
     display: flex;
     align-items: center;
     background: #F2F3F5;
     text-align: center;
     border-radius: 50px 50px 50px 50px;
     font-size: 20px;
-    height: 90%;
+    height: 40px;
     width: 100%;
     margin-left: 5px;
+    margin-right: 5px;
   }
 
 .search-term {
@@ -79,38 +86,35 @@ body {
  }
 
  #logo {
-     height: 90%;
+     height: 40px;
  }
 
 
 .header-button {
-    height: 90%;
+    height: 40px;
     width: 10%;
     color: #505050;
     text-align: center;
 }
 
 .header-button:hover {
-    height: 90%;
-    width: 10%;
-    color: #505050;
     background: #F2F3F5;
-    text-align: center;
     border-radius: 10px 10px 10px 10px;
 }
 .profile-pic {
     border-radius: 50%;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     padding: 5px;
+    object-fit: cover;
 }
 .profile {
     padding: 5px;
-    width: 40%;
-    height: 80%;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: left;
+    margin-right: 5px;
 }
 .profile:hover {
     background: #F2F3F5;
@@ -118,8 +122,8 @@ body {
 }
 
 .header-account-button {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     background: #F2F3F5;
     color: #505050;
     text-align: center;
@@ -136,4 +140,139 @@ body {
 
 body {
     background: #F2F3F5;
+}
+
+/*================================================================
+|
+|   MAIN
+|
+================================================================*/
+
+.main {
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.main-left {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.main-center {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.header-right {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    font-size: 14px;
+}
+
+.post {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    font-size: 14px;
+    background: #ffffff;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 3px 3px 3px #b3b3b3;;
+    margin: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+
+.post-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.post-meta {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    padding: 5px;
+}
+
+.post-creator {
+    font-size: 14px;
+    font-style: bold;
+}
+
+.post-date {
+    font-size: 10px;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    width: 80%;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.post-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.post-footer-button {
+    height: 30px;
+    width: 33%;
+    color: #505050;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.post-footer-button:hover {
+    background: #F2F3F5;
+    border-radius: 10px 10px 10px 10px;
+}
+
+hr.separator {
+    border: 0.5px solid #d3d3d3;
+    width: 100%;
+}
+
+#live {
+    color: rgb(190, 54, 54);
+}
+
+#photo {
+    color: rgb(59, 146, 81);
+}
+
+#activity {
+    color: rgb(233, 222, 66);
 }
