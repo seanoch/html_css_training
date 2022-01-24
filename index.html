@@ -6,13 +6,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
+    <script src="scripts/stories.js"></script>
     <title>My Facebook Clone</title>
   </head>
   <body>
+
     <div class="header">
       <div class="header-home">
         <img src="images/logo.svg" id="logo">
-        <div class="search">
+        <div class="input-panel">
           <span class="material-icons md-36" id="search-icon">&#xE8B6;</span>
           <input type="text" class="search-term" placeholder="Search Facebook"></input>
         </div>
@@ -37,7 +39,7 @@
       <div class="header-account">
         <div class="profile">
           <img src="images/profile.png" class="profile-pic"> 
-          Wix Account
+          <div class="button-text">Wix Account</div>
         </div>
         <div class="header-account-button">
           <span class="material-icons md-24">&#xe0be;</span> 
@@ -47,8 +49,182 @@
         </div>
       </div>
     </div>
+
     <div class="main">
-      Hello!
+
+      <div class="main-left">
+        <div class="menu-item">
+          <img src="images/profile.png" class="menu-item-profile-pic"> 
+          <div class="button-text">Wix Account</div>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons md-36 menu-item-icon colorful">&#xe7fb;</span> 
+          <div class="button-text">Friends</div>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons md-36 menu-item-icon colorful">&#xf233;</span> 
+          <div class="button-text">Groups</div>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons md-36 menu-item-icon colorful">&#xe547;</span> 
+          <div class="button-text">Market Place</div>
+        </div>
+        <hr class="menu-separator">
+        <label class="menu-text">Your Shortcuts</label>
+        <div class="menu-item">
+          <span class="material-icons md-36 menu-item-icon gray">&#xe873;</span> 
+          <div class="button-text">Spider-Man: No Way Home</div>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons md-36 menu-item-icon gray">&#xe873;</span> 
+          <div class="button-text">הפשוטע</div>
+        </div>
+        <div class="menu-item">
+          <span class="material-icons md-36 menu-item-icon gray">&#xe873;</span> 
+          <div class="button-text">ההורים שלי בני דודים</div>
+        </div>
+      </div>
+
+      <div class="main-center">
+
+        <div class="story"></div>
+
+        <div class="post">
+          <div class="post-header" >
+            <img src="images/profile.png" class="profile-pic">
+            <div class="input-panel">
+              <input type="text" class="search-term" placeholder="What's on your mind?"></input>
+            </div>
+          </div>
+          <hr class="post-separator">
+          <div class="post-footer" >
+            <div class="post-footer-button">
+              <span class="material-icons md-24" id="live">&#xf080;</span>
+              <div class="button-text">Live/Video</div>
+            </div>
+            <div class="post-footer-button">
+              <span class="material-icons md-24" id="photo">&#xe413;</span>
+              <div class="button-text">Photo/Video</div>
+            </div>
+            <div class="post-footer-button">
+              <span class="material-icons md-24" id="activity">&#xea22;</span>
+              <div class="button-text">Feeling/Activity</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post-header" >
+            <div><img src="images/profile.png" class="profile-pic"></div> 
+            <div class="post-meta">
+              <label class="post-creator">Wix Account</label>
+              <label class="post-date">14/01/2022</label>
+            </div>
+          </div>
+          <div class="post-content" >
+            Hello world, this is a Facebook post.
+          </div>
+          <hr class="post-separator">
+          <div class="post-footer" >
+            <div class="post-footer-button">
+              <span class="material-icons md-24">&#xe8dc;</span>
+              <div class="button-text">Like</div>
+            </div>
+            <div class="post-footer-button">
+              <span class="material-icons md-24">&#xe253;</span>
+              <div class="button-text">Comment</div>
+            </div>
+            <div class="post-footer-button">
+              <span class="material-icons md-24">&#xe80d;</span>
+              <div class="button-text">Share</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post-header" >
+            <div><img src="images/Andrew.jpeg" class="profile-pic"></div> 
+            <div class="post-meta">
+              <label class="post-creator">Andrew Garfield</label>
+              <label class="post-date">12/01/2022</label>
+            </div>
+          </div>
+          <div class="post-content" >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <hr class="post-separator">
+          <div class="post-footer" >
+            <div class="post-footer-button">
+              <span class="material-icons md-24">&#xe8dc;</span>
+              <div class="button-text">Like</div>
+            </div>
+            <div class="post-footer-button">
+              <span class="material-icons md-24">&#xe253;</span>
+              <div class="button-text">Comment</div>
+            </div>
+            <div class="post-footer-button">
+              <span class="material-icons md-24">&#xe80d;</span>
+              <div class="button-text">share</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post-header" >
+            <div><img src="images/Andrew.jpeg" class="profile-pic"></div> 
+            <div class="post-meta">
+              <label class="post-creator">Andrew Garfield</label>
+              <label class="post-date">12/01/2022</label>
+            </div>
+          </div>
+          <div class="post-content" >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <hr class="post-separator">
+          <div class="post-footer" >
+            <div class="post-footer-button">
+              <span class="material-icons md-24">&#xe8dc;</span>
+              <div class="button-text">Like</div>
+            </div>
+            <div class="post-footer-button">
+              <span class="material-icons md-24">&#xe253;</span>
+              <div class="button-text">Comment</div>
+            </div>
+            <div class="post-footer-button">
+              <span class="material-icons md-24">&#xe80d;</span>
+              <div class="button-text">Share</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="main-right">
+        <label class="menu-text">Contacts</label>
+        <div class="menu-item">
+          <img src="images/andrew.jpeg" class="menu-item-profile-pic"> 
+          <div class="button-text">Andrew Garfield</div>
+          <span class="dot online"></span>
+        </div>
+        <div class="menu-item">
+          <img src="images/jennifer.jpeg" class="menu-item-profile-pic"> 
+          <div class="button-text">Jennifer Aniston</div>
+          <span class="dot online"></span>
+        </div>
+        <div class="menu-item">
+          <img src="images/tom.jpeg" class="menu-item-profile-pic"> 
+          <div class="button-text">Tom Holland</div>
+          <span class="dot offline"></span>
+        </div>
+        <div class="menu-item">
+          <img src="images/taylor.jpeg" class="menu-item-profile-pic"> 
+          <div class="button-text">Taylor Swift</div>
+        </div>
+        <div class="menu-item">
+          <img src="images/emma.jpeg" class="menu-item-profile-pic"> 
+          <div class="button-text">Emma Stone</div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

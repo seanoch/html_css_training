@@ -1,18 +1,31 @@
+:root {
+    --logo-blue: #4267B2;
+    --dark-gray: #505050;
+    --soft-gray: #b3b3b3;
+  }
+
 html {
-    font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
-    font-family: "Lato", sans-serif; /* this should be the rest of the output you got from Google fonts */
+    font-size: 10px;
+    font-family: "Lato", sans-serif;
 }
 
 body {
     margin: 0px 0px 0px 0px;
 }
 
+/*================================================================
+|
+|   HEADER
+|
+================================================================*/
+
 .header {
     height: 40px;
     background-color: #ffffff;
     padding: 5px 5px 5px 5px;
-    position: sticky;
-    box-shadow: 3px 3px 3px #b3b3b3;;
+    position: fixed;
+    width: 100%;
+    box-shadow: 3px 3px 3px var(--soft-gray);
     display: flex;
     align-items: center;
 }
@@ -20,7 +33,6 @@ body {
 .header-home {
     height: 100%;
     width: 20%;
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -32,18 +44,19 @@ body {
     width: 60%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .header-account {
     height: 100%;
     width: 20%;
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: right;
     align-items: center;
     font-size: 14px;
+    margin-right: 10px;
 }
 
 .material-icons.md-18 { font-size: 18px; }
@@ -51,77 +64,78 @@ body {
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
-.search {
+.input-panel {
     display: flex;
     align-items: center;
     background: #F2F3F5;
     text-align: center;
     border-radius: 50px 50px 50px 50px;
     font-size: 20px;
-    height: 90%;
+    height: 40px;
     width: 100%;
     margin-left: 5px;
+    margin-right: 5px;
   }
 
 .search-term {
     height: 90%;
-    padding: 5px;
+    width: 80%;
+    padding: 10px;
     border: none;
     background: transparent;
     outline: none;
 }
 
 #search-icon {
-   color: #505050;
+   color: var(--dark-gray);
    font-size: 24px;
-   width: 10%;
+   width: 20px;
    margin-left: 10px;
  }
 
  #logo {
-     height: 90%;
+     height: 40px;
  }
 
 
 .header-button {
-    height: 90%;
+    height: 40px;
     width: 10%;
-    color: #505050;
+    color: var(--dark-gray);
     text-align: center;
 }
 
 .header-button:hover {
-    height: 90%;
-    width: 10%;
-    color: #505050;
     background: #F2F3F5;
-    text-align: center;
     border-radius: 10px 10px 10px 10px;
 }
 .profile-pic {
     border-radius: 50%;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     padding: 5px;
+    object-fit: cover;
 }
+
 .profile {
     padding: 5px;
-    width: 40%;
-    height: 80%;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: left;
+    margin-right: 5px;
 }
+
 .profile:hover {
     background: #F2F3F5;
     border-radius: 10px 10px 10px 10px;
 }
 
 .header-account-button {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     background: #F2F3F5;
-    color: #505050;
+    color: var(--dark-gray);
     text-align: center;
     border-radius: 40px 40px 40px 40px;
     display: flex;
@@ -137,3 +151,234 @@ body {
 body {
     background: #F2F3F5;
 }
+
+/*================================================================
+|
+|   MAIN
+|
+================================================================*/
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.main-left {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;
+    left: 0;
+    position: fixed;
+}
+
+.main-center {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    left: 20%;
+}
+
+.main-right {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;
+    position: fixed;
+    right: 0px;
+}
+
+.post {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    font-size: 14px;
+    background: #ffffff;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 3px 3px 3px var(--soft-gray);
+    margin: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+
+.post-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.post-meta {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    padding: 5px;
+}
+
+.post-creator {
+    font-size: 14px;
+    font-style: bold;
+}
+
+.post-date {
+    font-size: 10px;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    width: 80%;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.post-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.post-footer-button {
+    height: 30px;
+    width: 33%;
+    color: var(--dark-gray);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.post-footer-button:hover {
+    background: #F2F3F5;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.post-separator {
+    border: 0.5px solid #d3d3d3;
+    width: 100%;
+}
+
+.button-text {
+    font-size: 14px;
+    font-style: bold;
+    padding: 5px;
+}
+
+#live {
+    color: rgb(190, 54, 54);
+}
+
+#photo {
+    color: rgb(59, 146, 81);
+}
+
+#activity {
+    color: rgb(233, 222, 66);
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 80%;
+    font-size: 14px;
+    position: relative;
+}
+
+.menu-item:hover {
+    background: #b9b9b9;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.menu-separator {
+    border: 0.5px solid #d3d3d3;
+    width: 80%;
+    align-items: left;
+    margin: 10px;
+}
+
+.menu-item-icon {
+        /* Set the background size and repeat properties. */
+        background-size: 100%;
+        background-repeat: repeat;
+    
+        /* Use the text as a mask for the background. */
+        /* This will show the gradient as a text color rather than element bg. */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+}
+
+.menu-item-icon.colorful {
+    background-color: var(--logo-blue);
+    /* Create the gradient. */
+    background-image: linear-gradient(315deg, var(--logo-blue) 40%, #66dff1 70%);
+}
+
+.menu-item-icon.gray {
+    background-color: var(--dark-gray);
+    /* Create the gradient. */
+    background-image: linear-gradient(315deg, var(--dark-gray) 40%, var(--soft-gray) 70%);
+}
+
+.menu-item-profile-pic {
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+}
+
+.menu-text {
+    color: var(--dark-gray);
+    margin: 10px;
+    font-size: 16px;
+    font-style: bold;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+  }
+
+  .online {
+    background-color: rgb(20, 153, 60);
+  }
+
+  .offline {
+    background-color: rgb(206, 69, 35);
+  }
