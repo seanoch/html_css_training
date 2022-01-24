@@ -1,3 +1,9 @@
+:root {
+    --logo-blue: #4267B2;
+    --dark-gray: #505050;
+    --soft-gray: #b3b3b3;
+  }
+
 html {
     font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
     font-family: "Lato", sans-serif; /* this should be the rest of the output you got from Google fonts */
@@ -19,7 +25,7 @@ body {
     padding: 5px 5px 5px 5px;
     position: fixed;
     width: 100%;
-    box-shadow: 3px 3px 3px #b3b3b3;;
+    box-shadow: 3px 3px 3px var(--soft-gray);
     display: flex;
     align-items: center;
 }
@@ -38,6 +44,7 @@ body {
     width: 60%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -80,7 +87,7 @@ body {
 }
 
 #search-icon {
-   color: #505050;
+   color: var(--dark-gray);
    font-size: 24px;
    width: 20px;
    margin-left: 10px;
@@ -94,7 +101,7 @@ body {
 .header-button {
     height: 40px;
     width: 10%;
-    color: #505050;
+    color: var(--dark-gray);
     text-align: center;
 }
 
@@ -128,7 +135,7 @@ body {
     height: 35px;
     width: 35px;
     background: #F2F3F5;
-    color: #505050;
+    color: var(--dark-gray);
     text-align: center;
     border-radius: 40px 40px 40px 40px;
     display: flex;
@@ -201,7 +208,7 @@ body {
     font-size: 14px;
     background: #ffffff;
     border-radius: 20px 20px 20px 20px;
-    box-shadow: 3px 3px 3px #b3b3b3;;
+    box-shadow: 3px 3px 3px var(--soft-gray);
     margin: 10px;
     padding-top: 10px;
     padding-left: 5px;
@@ -257,11 +264,12 @@ body {
 .post-footer-button {
     height: 30px;
     width: 33%;
-    color: #505050;
+    color: var(--dark-gray);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     padding: 10px;
 }
 
@@ -270,9 +278,15 @@ body {
     border-radius: 10px 10px 10px 10px;
 }
 
-hr.separator {
+.post-separator {
     border: 0.5px solid #d3d3d3;
     width: 100%;
+}
+
+.button-text {
+    font-size: 14px;
+    font-style: bold;
+    padding: 5px;
 }
 
 #live {
@@ -303,8 +317,45 @@ hr.separator {
     border-radius: 10px 10px 10px 10px;
 }
 
+.menu-separator {
+    border: 0.5px solid #d3d3d3;
+    width: 80%;
+    align-items: left;
+    margin: 10px;
+}
+
 .menu-item-icon {
-    color: #5a8dd8;
+    background-color: var(--logo-blue);
+    /* Create the gradient. */
+    background-image: linear-gradient(315deg, var(--logo-blue) 40%, #66dff1 70%);
+  
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.menu-page-icon {
+    background-color: var(--dark-gray);
+    /* Create the gradient. */
+    background-image: linear-gradient(315deg, var(--dark-gray) 40%, var(--soft-gray) 70%);
+  
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 #menu-item-profile-pic {
@@ -312,4 +363,11 @@ hr.separator {
     height: 45px;
     width: 45px;
     object-fit: cover;
+}
+
+.menu-text {
+    color: var(--dark-gray);
+    margin: 10px;
+    font-size: 16px;
+    font-style: bold;
 }
